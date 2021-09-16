@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 
 class LoginActivity : AppCompatActivity() {
 
@@ -23,6 +24,13 @@ class LoginActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progress_bar)
         val forgetPass : TextView = findViewById(R.id.forget_password)
         val radioRemember: RadioButton = findViewById(R.id.rememberme)
+
+        val builder = AlertDialog.Builder(this, R.style.AlertDialog_AppCompat).create()
+        builder.setTitle("Harap isi")
+        builder.setMessage("Tentukan pilihan anda")
+        builder.setIcon(R.drawable.ic_person)
+        builder.setCancelable(true)
+        builder.show()
 
 
         dataEmail = arrayOf("kapa", "paqih", "akbar")
